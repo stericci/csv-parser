@@ -1,0 +1,19 @@
+{
+  "name": "csv-parser",
+  "version": "1.0.0",
+  "description": "A simple csv-parser to be run in the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stericci/csv-parser.git"
+  },
+  "author": "Stefano Ricci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stericci/csv-parser/issues"
+  },
+  "homepage": "https://github.com/stericci/csv-parser#readme"
+}
