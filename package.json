@@ -1,5 +1,6 @@
 {
   "name": "csv-parser",
+  "type": "module",
   "version": "1.0.0",
   "description": "A simple csv-parser to be run in the browser",
   "main": "index.js",

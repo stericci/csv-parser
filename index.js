@@ -56,7 +56,7 @@ function parse (s, options) {
     let cur = ""; // The character we are currently processing.
     let inQuote = false;
     let fieldQuoted = false;
-    let headers = (Array.isArray(opt.headers)) ? opt.headers : false;
+    let headers = (Array.isArray(opt.headers)) ? opt.headers : false; // headers as array is not really supported as they are overwritten
     let row = [];
     let field = '';
     let emptyRow = true;
