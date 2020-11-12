@@ -37,7 +37,7 @@ function parse (s, options) {
       //doublequote: true,
       quoteChar: '"',
       skipInitialSpace: true,
-      //skipinitialrows: 0
+      skipInitialRows: 0
       skipEmptyValues: true,
       skipEmptyRows: true
     }, options);
@@ -60,6 +60,7 @@ function parse (s, options) {
     let row = [];
     let field = '';
     let emptyRow = true;
+    let skipInitialRows = opt.skipInitialRows || 0;
 
     const processField = field => {
         if (!fieldQuoted) {
@@ -112,9 +113,14 @@ function parse (s, options) {
         row.push(field);
         // If this is EOR append row to output and flush row
         if (cur === opt.lineTerminator) {
-          if (!opt.skipEmptyRows || !emptyRow) {
-            addRow(row);
+          if (!skipInitialRows) {
+            if (!opt.skipEmptyRows || !emptyRow) {
+              addRow(row);
+            }
+          } else {
+            skipInitialRows--;
           }
+          
           row = [];
           emptyRow = true;
         }
