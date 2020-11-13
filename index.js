@@ -37,7 +37,7 @@ function parse (s, options) {
       //doublequote: true,
       quoteChar: '"',
       skipInitialSpace: true,
-      skipInitialRows: 0
+      skipInitialRows: 0,
       skipEmptyValues: true,
       skipEmptyRows: true
     }, options);
